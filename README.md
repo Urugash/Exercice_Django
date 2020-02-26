@@ -13,7 +13,7 @@ Pour exécuter l'application il faut lancer la commande suivante:
 cd djangonautic
 python manage.py runserver
 ```
-Elle nécessite d'avoir python installé sur votre ordinateur, si vous ne l'avez pas il faut aller [ici](https://www.python.org/downloads/).
+Elle nécessite d'avoir python installé sur votre ordinateur, si vous ne l'avez pas, cliquez [ici](https://www.python.org/downloads/).
 
 ## Administrateur
 Un utilisateur administrateur existe déjà, il suffit de se connecter avec:
@@ -40,3 +40,9 @@ Les articles peuvent être affichés en fonction de leur tag. Il suffit de cliqu
 
 ## Inscription
 On peut créer un nouvel utilisateur dans l'onglet inscription. Ce formulaire est basé uniquement à partir du formulaire d'inscription basique de Django.
+
+## Modification
+Un administrateur peut modifier un article créé par n'importe quel utilisateur. Si un administrateur n'est pas connecté au moment de cliquer sur Modifier, l'utilisateur est redirigé vers la page de connexion.
+
+## Suppression
+Un administrateur peut supprimer n'importe quel article. L'utilisateur est également redirigé s'il n'est pas administrateur.
