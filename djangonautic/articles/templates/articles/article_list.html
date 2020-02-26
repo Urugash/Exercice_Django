@@ -1,0 +1,32 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="tags">
+  <p>Common Tags:</p>
+    {% for tag in common_tags %}
+      <li class="ListTag">
+        <a href="{% url 'articles:tagged' slug=tag %}" class="tag">{{tag}}</a>
+      </li>
+    {% endfor %}
+</div>
+  <h1>Articles</h1>
+  <div class="articles">
+    {% if not articles %}
+    <p>Aucun article n'est disponible pour l'instant.</p>
+    {% endif %}
+    {% for article in articles %}
+      <div class="article">
+        <h2> <a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a> </h2>
+        <a href="{% url 'articles:delete' slug=article.slug %}" class="highlight">Supprimer</a>
+        <a href="{% url 'articles:edit' slug=article.slug %}" class="highlight">Modifier</a>
+        <br><br>
+        {% for tag in article.tags.all %}
+          <a href="{% url 'articles:tagged' slug=tag %}" class="tagArticle">{{tag}}</a>
+        {% endfor %}
+        <p>{{article.snippet}}</p>
+        <p>{{article.date}}</p>
+        <p class="author">ajouté par {{article.author.username}}</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

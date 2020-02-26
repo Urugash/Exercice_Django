@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Articles</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1><a href="{% url 'home'%}"><img class="logo" src="{% static 'logo.png' %}"> </a></h1>
+      <nav>
+        <ul>
+          {% if user.is_authenticated %}
+          <li>
+            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+              {% csrf_token %}
+              <button type="submit">Se déconnecter</button>
+            </form>
+          </li>
+          <li>
+            <a href="{% url 'articles:create' %}" class="highlight">Nouvel Article</a>
+          </li>
+          {% else %}
+          <li>
+            <a href="{% url 'accounts:login' %}">Se connecter</a>
+          </li>
+          <li>
+            <a href="{% url 'accounts:signup' %}">S'inscrire</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+      <div class="wrapper">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
