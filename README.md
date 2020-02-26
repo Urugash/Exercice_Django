@@ -8,8 +8,10 @@ En tant qu'administrateur on peut supprimer ou modifier les articles.
 ## Administrateur
 Un utilisateur administrateur existe déjà, il suffit de se connecter avec:
 
+```python
 admin
 adminpassword
+```
 
 ## Utilisateur
 Un utilisateur lambda existe également:
@@ -28,4 +30,6 @@ Pour exécuter l'application il faut lancer la commande suivante:
 cd djangonautic
 python manage.py runserver
 ```
+Elle nécessite d'avoir python installé sur votre ordinateur, si vous ne l'avez pas il faut aller [ici](https://www.python.org/downloads/).
+
 
