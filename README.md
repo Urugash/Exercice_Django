@@ -39,7 +39,7 @@ N'importe quel type d'utilisateur peut créer un article. Il est constitué d'un
 Les articles peuvent être affichés en fonction de leur tag. Il suffit de cliquer sur le tag en question sur un article le contenant. Il y a également les 4 tags les plus utilisés accessibles sur le côté.
 
 ## Inscription
-On peut créer un nouvel utilisateur dans l'onglet inscription. Ce formulaire est basé uniquement à partir du formulaire d'inscription basique de Django.
+On peut créer un nouvel utilisateur dans l'onglet inscription. Ce formulaire est basé uniquement sur le formulaire d'inscription basique de Django.
 
 ## Modification
 Un administrateur peut modifier un article créé par n'importe quel utilisateur. Si un administrateur n'est pas connecté au moment de cliquer sur Modifier, l'utilisateur est redirigé vers la page de connexion.
