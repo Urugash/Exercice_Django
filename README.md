@@ -8,8 +8,10 @@ En tant qu'administrateur on peut supprimer ou modifier les articles.
 ## Administrateur
 Un utilisateur administrateur existe déjà, il suffit de se connecter avec:
 
+```python
 admin
 adminpassword
+```
 
 ## Utilisateur
 Un utilisateur lambda existe également:
