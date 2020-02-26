@@ -58,6 +58,7 @@ def article_edit(request,slug):
             instance.author=article.author
             article.delete()
             instance.save()
+            form.save_m2m()
             return redirect('articles:list')
     else:
         article = Article.objects.get(slug=slug)
